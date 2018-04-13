@@ -21,7 +21,7 @@ body {
 form {
   position: relative;
   background-color: #212121;
-  color: #ffebee;
+  color: #f5f5f5;
   font-family: "Strait", sans-serif;
   box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.5);
   min-height: 70vh;
@@ -76,7 +76,7 @@ form {
     text-align: center;
     font-family: "Strait", sans-serif;
     font-size: 3vh; }
-    #inputs input:hover, #inputs input:focus {
+    #inputs input:focus {
       background: linear-gradient(-45deg, #ffcdd2 10%, #f5f5f5 20%, #f5f5f5 80%, #9be7ff 100%);
       color: #2286c3; }
 
