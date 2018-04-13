@@ -1,0 +1,76 @@
+form
+    position: relative
+
+    background-color: $variant-black1
+    color: $primary-l
+    font-family: $primaryFont
+    box-shadow: 3px 3px 3px rgba(0,0,0,0.5)
+
+    min-height: 70vh
+    max-height: auto
+    min-width: 45vh
+    max-width: auto
+
+    display: flex
+    flex-direction: column
+    justify-content: flex-start
+    align-items: center
+
+    padding: 15vh 0
+
+    &:before
+        content: ""
+        position: absolute
+        top: 0
+        height: 1vh
+        width: 100%
+        background: linear-gradient(45deg, $secondary-l, $primary-n)
+
+    &:after
+        content: ""
+        position: absolute
+        bottom: 0
+        height: 1vh
+        width: 100%
+        background: linear-gradient(45deg, $secondary-l, $primary-n)
+
+    #titleForm
+        font-size: 5vh
+
+    button
+        border: none
+        height: 6vh
+        width: 50%
+        border-radius: 10px
+        background-color: $primary-l
+        color: $variant-black2
+        font-family: "Strait", sans-serif
+        font-size: 2.5vh
+
+        &:hover
+            background: linear-gradient(-45deg, $primary-n 10%, $primary-l 50%, $primary-l 50%, $secondary-l 100%)
+            color: $variant-black1
+
+
+#inputs
+    margin: 6vh 0
+    width: 100%
+
+    input
+        display: block
+        margin: 1px 0
+        width: 100%
+        height: 5.5vh
+
+        border: none
+
+        background: $primary-l
+        color: $secondary-n
+        text-align: center
+        font-family: "Strait", sans-serif
+        font-size: 3vh
+
+        &:hover,&:focus
+            background: linear-gradient(-45deg, $primary-n 10%, $primary-l 20%, $primary-l 80%, $secondary-l 100%)
+            color: $secondary-d
+
