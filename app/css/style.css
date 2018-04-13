@@ -74,7 +74,8 @@ form {
       color: #f5f5f5; }
   form p {
     margin: 5px;
-    padding: 0; }
+    padding: 0;
+    font-size: 2vh; }
 
 #inputs {
   margin: 6vh 0;
