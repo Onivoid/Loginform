@@ -1,0 +1,10 @@
+$(document).ready(function(){
+    $('#registerToggle').click(function(){
+        $('#login').hide();
+        $('#register').fadeIn(1500);
+    });
+    $('#loginToggle').click(function(){
+        $('#register').hide();
+        $('#login').fadeIn(1500);
+    });
+});

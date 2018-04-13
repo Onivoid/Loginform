@@ -64,6 +64,17 @@ form {
       color: #f5f5f5; }
     form button:focus {
       outline: none; }
+  form a {
+    text-decoration: none;
+    color: #717171;
+    transition: color 0.3s;
+    margin: 0;
+    padding: 0; }
+    form a:hover {
+      color: #f5f5f5; }
+  form p {
+    margin: 5px;
+    padding: 0; }
 
 #inputs {
   margin: 6vh 0;
@@ -83,6 +94,9 @@ form {
       background: linear-gradient(-45deg, #ffcdd2 10%, #f5f5f5 20%, #f5f5f5 80%, #9be7ff 100%);
       color: #2286c3;
       outline: none; }
+
+#register {
+  display: none; }
 
 section.main {
   position: relative;
