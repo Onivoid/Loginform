@@ -1,15 +1,14 @@
 form
-    position: relative
-
+    position: absolute
+    top: 0
+    left: 0
     background-color: $variant-black1
     color: $colorS
     font-family: $primaryFont
     box-shadow: 3px 3px 3px rgba(0,0,0,0.5)
 
-    min-height: 70vh
-    max-height: auto
-    min-width: 50vh
-    max-width: auto
+    height: 100%
+    width: 100%
 
     display: flex
     flex-direction: column
@@ -34,7 +33,7 @@ form
         width: 100%
         background: linear-gradient(45deg, $secondary-l, $primary-n)
 
-    #titleForm
+    .form-title
         font-size: 5vh
 
     button
@@ -68,32 +67,56 @@ form
         font-size: 2vh
 
 
-#inputs
+.form-fields_wrapper
     margin: 6vh 0
     width: 100%
+
+    .form-field
+        position: relative
+        background-color: $colorS
+        overflow: hidden
+        &:before, &:after
+            content: ''
+            position: absolute
+            top: 0
+            left: 0
+            width: 100%
+            height: 100%
+            z-index: 1
+            transition: all 0.5s
+            opacity: 0
+        &::before
+            background: linear-gradient(-45deg, $primary-n 10%, transparent 20%)
+            transform: translateX(100%)
+        &::after
+            background: linear-gradient(-45deg, transparent 80%, $secondary-l 100%)
+            transform: translateX(-100%)
+        &.focused:before, &.focused:after
+            transform: none
+            opacity: 1
 
     input
         display: block
         width: 100%
         height: 5.5vh
         margin: 0.5vh 0
-
+        position: relative
+        z-index: 2
         border: none
 
-        background: $colorS
+        background: transparent
         color: $secondary-n
         text-align: center
         font-family: "Strait", sans-serif
         font-size: 3vh
 
         &:focus
-            background: linear-gradient(-45deg, $primary-n 10%, $colorS 20%, $colorS 80%, $secondary-l 100%)
+            // background: linear-gradient(-45deg, $primary-n 10%, $colorS 20%, $colorS 80%, $secondary-l 100%)
             color: $secondary-d
             outline: none
 
 #register
-    display: none
-    
+    transform: translateX(50%) rotateY(90DEG) translateX(50%)
     button
         border: 2px solid $primary-d
         color: $primary-d
@@ -106,3 +129,12 @@ form
 
         &:focus
             color: $primary-n
+
+.form-wrapper
+    position: relative
+    width: 280px
+    height: 70vh
+    transform-style: preserve-3d
+    transition: transform 1s
+    &.toggled
+        transform: translateX(-50%) rotateY(-90DEG) translateX(-50%)
