@@ -9,29 +9,44 @@
     <link rel="stylesheet" href="app/css/style.css">
 </head>
 <body>
-    
+
     <section class="main">
-        <form action="#" id="login">
-                <span id="titleForm">Connexion</span>
-                <div id="inputs">
-                    <input type="text" placeholder="Pseudo"/>
-                    <input type="password" placeholder="Mot de passe"/>
+        <div class="form-wrapper">
+            <form action="#" id="login">
+                <span class="form-title">Connexion</span>
+                <div class="form-fields_wrapper">
+                    <div class="form-field">
+                        <input type="text" placeholder="Pseudo"/>
+                    </div>
+                    <div class="form-field">
+                        <input type="password" placeholder="Mot de passe"/>
+                    </div>
                 </div>
-                <button type="submit">Se Connecter</button> 
+                <button type="submit">Se Connecter</button>
                 <a href="#"><p>Mot de passe oublié ?</p></a>
-                <a href="#" id="registerToggle"><p>Créer un compte</p></a>
-        </form>
-        <form action="#" id="register">
-                <span id="titleForm">S'inscrire</span>
-                <div id="inputs">
-                    <input type="text" placeholder="Pseudo"/>
-                    <input type="mail" placeholder="Adresse e-mail"/>
-                    <input type="password" placeholder="Mot de passe"/>
-                    <input type="password" placeholder="Confirmer mot de passe"/>
+                <a href="#" display-toggle>Créer un compte</a>
+            </form>
+
+            <form action="#" id="register">
+                <span class="form-title">S'inscrire</span>
+                <div class="form-fields_wrapper">
+                    <div class="form-field">
+                        <input type="text" placeholder="Pseudo"/>
+                    </div>
+                    <div class="form-field">
+                        <input type="mail" placeholder="Adresse e-mail"/>
+                    </div>
+                    <div class="form-field">
+                        <input type="password" placeholder="Mot de passe"/>
+                    </div>
+                    <div class="form-field">
+                        <input type="password" placeholder="Confirmer mot de passe"/>
+                    </div>
                 </div>
-                <button type="submit">S'inscrire</button> 
-                <a href="#" id="loginToggle"><p>Déjà inscrit ? Connectez-vous</p></a>
-        </form>
+                <button type="submit">S'inscrire</button>
+                <a href="#" display-toggle>Déjà inscrit ? Connectez-vous</a>
+            </form>
+        </div>
     </section>
 
     <script src="app/js/jquery.js"></script>
